@@ -1,0 +1,14 @@
+import requests
+
+url = 'https://www.valuergeneral.nsw.gov.au/__psi/weekly/20200106.zip'
+
+response = requests.get(url)
+
+# Unzip it into a local directory if you want
+import zipfile, io
+
+zip = zipfile.ZipFile(io.BytesIO(response.content))
+zip.extractall("CSV")
+
+
+

@@ -1,0 +1,20 @@
+Installation:
+=======================
+
+Install python first:
+
+1. pip3 install requests
+2. pip3 install beautifulsoup4
+
+
+Web Scrapping Code
+=======================
+
+
+import requests
+from bs4 import BeautifulSoup
+URL = 'https://www.monster.com/jobs/search/?q=Software-Developer&where=Canada'
+page = requests.get(URL)
+soup = BeautifulSoup(page.content, 'html.parser')
+job_ttle=soup.select("#SearchResults h2.title a")
+job_location=soup.select("##SearchResults .summary .location .name"
