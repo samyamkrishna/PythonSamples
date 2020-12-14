@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://www.valuergeneral.nsw.gov.au/__psi/weekly/20200106.zip'
+url = 'https://www.xides.au/__psi/weekly/20200106.zip'
 
 response = requests.get(url)
 
